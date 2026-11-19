@@ -1,0 +1,12 @@
+:root{--verde-escuro:#1a5d3a;--verde-claro:#e8f5e9;--bege:#fdf8ee;--cinza:#555}
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:0;background:var(--bege);color:#222}
+.header{background:var(--verde-escuro);color:#fff;padding:24px;text-align:center}
+.calculator{max-width:720px;margin:0 auto;padding:16px}
+.calculator__form{background:#fff;padding:16px;border-radius:12px;display:flex;flex-direction:column;gap:12px}
+.calculator__form input,.calculator__form select{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px}
+.calculator__button{background:var(--verde-escuro);color:#fff;border:0;padding:12px;border-radius:8px;cursor:pointer}
+.calculator__button--secondary{background:#eee;color:#222}
+.result,.comparison,.credits,.how{background:#fff;padding:16px;border-radius:12px;margin-top:16px}
+.comparison__table{width:100%;border-collapse:collapse}.comparison__table td,.comparison__table th{border-bottom:1px solid #ddd;padding:8px;text-align:left}
+.barra{height:18px;background:var(--verde-escuro);border-radius:6px;margin:4px 0}
+.calculator__aviso{color:#b00020}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de CO2 - Viagens</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><h1 class="header__title">Calculadora de CO2 - Viagens</h1><p class="header__subtitle">Descubra quanto CO2 sua viagem emite e quanto custa compensar</p></header>
+<main class="calculator">
+<section class="calculator__form">
+<label>Origem <input id="origem" list="cidades" placeholder="Ex: Rio de Janeiro"></label>
+<label>Destino <input id="destino" list="cidades" placeholder="Ex: São Paulo"></label>
+<datalist id="cidades"></datalist>
+<label><input type="checkbox" id="usarManual"> Usar distância manual</label>
+<label>Distância manual (km) <input id="distManual" type="number" min="0" placeholder="Ex: 430"></label>
+<label>Meio de transporte
+<select id="meio"><option value="bicicleta">Bicicleta</option><option value="carro" selected>Carro</option><option value="onibus">Ônibus</option><option value="caminhao">Caminhão</option></select></label>
+<button id="btnCalcular" class="calculator__button">Calcular</button>
+<button id="btnLimpar" class="calculator__button calculator__button--secondary">Limpar</button>
+<p id="aviso" class="calculator__aviso"></p>
+</section>
+<section id="resultado" class="result" hidden>
+<h2>Resultado da viagem</h2>
+<p>Distância: <strong id="resDistancia"></strong></p>
+<p>Meio: <strong id="resMeio"></strong></p>
+<p>Emissão: <strong id="resEmissao"></strong></p>
+</section>
+<section id="comparacao" class="comparison" hidden>
+<h2>Comparação entre meios</h2>
+<table class="comparison__table"><thead><tr><th>Meio</th><th>Emissão (kg CO2)</th></tr></thead><tbody id="tabelaComparacao"></tbody></table>
+<div id="barras"></div>
+</section>
+<section id="creditos" class="credits" hidden>
+<h2>Créditos de carbono</h2>
+<p>Para compensar: <strong id="resCreditos"></strong></p>
+<p>Custo estimado: <strong id="resCusto"></strong></p>
+<p class="credits__info">1 crédito = 1 tonelada de CO2. Preço: R$ 25,00 por crédito.</p>
+</section>
+<section class="how">
+<h2>Como o cálculo funciona</h2>
+<p>Emissão (kg) = distância (km) × fator de emissão. Fatores: bicicleta 0, carro 0.17, ônibus 0.05, caminhão 0.80 kg CO2 por km. Créditos = emissão em toneladas arredondada para cima. Custo = créditos × R$ 25,00.</p>
+<p>Ordem de construção: index.html, style.css, config.js, calculator.js, ui.js, app.js</p>
+<p><strong>Prompt que funcionou bem:</strong> "Crie o index.html semântico da calculadora de CO2, com seções de busca, resultado, comparação e créditos, deixando resultado, comparação e créditos escondidas até calcular."</p>
+</section>
+</main>
+<script src="config.js"></script>
+<script src="calculator.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
